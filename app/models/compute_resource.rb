@@ -4,6 +4,7 @@ class ComputeResource < ApplicationRecord
   include Encryptable
   include Authorizable
   include Parameterizable::ByIdName
+  include ForemanProviders::ComputeResource
   encrypts :password
 
   validates_lengths_from_database
