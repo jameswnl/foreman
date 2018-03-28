@@ -54,6 +54,13 @@ gem 'dynflow', '>= 0.8.29', '< 1.0.0'
 gem 'daemons'
 gem 'get_process_mem'
 
+gem 'foreman_providers',           :git => 'https://github.com/agrare/foreman_providers.git'
+gem 'foreman_providers_infra',     :git => 'https://github.com/agrare/foreman_providers_infra.git'
+gem 'foreman_providers_ovirt',     :git => 'https://github.com/agrare/foreman_providers_ovirt.git'
+gem 'foreman_providers_cloud',     :git => 'https://github.com/jameswnl/foreman_providers_cloud.git'
+gem 'foreman_providers_openstack', :git => 'https://github.com/jameswnl/foreman_providers_openstack.git'
+gem "ovirt", "~>0.18.1"
+
 Dir["#{File.dirname(FOREMAN_GEMFILE)}/bundler.d/*.rb"].each do |bundle|
   self.instance_eval(Bundler.read_file(bundle))
 end
